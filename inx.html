@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            width: 50px;
+            height: 50px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div id='parent'></div>
+    <button onClick = "changeColorFunc('red')">red</button>
+    <button onClick = "changeColorFunc('yellow')">yellow</button>
+    <button onClick = "changeColorFunc('blue')">blue</button>
+</body>
+<script>
+function changeColorFunc(color){
+    
+    var btn = document.getElementById('parent');
+    btn.style.backgroundColor=color;
+}
+</script>
+
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: rgb(207, 207, 216);
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .firstTable {
+        display: flex;
+        width: 100%;
+    }
+
+    table caption,
+    table th,
+    table td {
+        padding: 0.2em 0.4em;
+    }
+
+
+    table {
+
+        background-color: white;
+        border-radius: 10px;
+        margin: 20px;
+        text-align: center;
+
+    }
+
+    .parent2 {
+        display: flex;
+        width: 100%;
+        /* height: 100vh; */
+
+
+    }
+
+    .secondTable {
+        display: flex;
+        width: 100%;
+    }
+
+    .parent3 {
+        width: 100%;
+
+    }
+
+    td {
+        font-weight: lighter;
+    }
+
+    .thirdTable {
+        display: flex;
+        width: 100%;
+    }
+
+    .parent4 {
+        display: flex;
+        width: 100%;
+
+    }
+
+    .fourthTable {
+        display: flex;
+        width: 100%;
+    }
+
+    .parent5 {
+        display: flex;
+        width: 100%;
+    }
+
+    .fifthTable {
+        display: flex;
+        width: 100%;
+    }
+
+    .parent6 {
+        display: flex;
+        width: 100%;
+    }
+
+    .sixthTable {
+        display: flex;
+        width: 100%;
+    }
+
+    .parentGrid {
+        display: grid;
+        width: 100%;
+        grid-template: repeat(3, 1fr);
+        gap: 20px;
+        grid-template-columns: auto auto;
+        padding: 10px;
+        padding-left: 30px;
+    }
+
+    .one {
+        width: 320px;
+        height: 140px;
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        padding-top: 10px;
+
+    }
+
+    .three {
+        position: relative;
+        width: 340px;
+        height: 140px;
+        background-color: white;
+        border-radius: 10px;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .innerDiv {
+        position: absolute;
+        width: 100px;
+        top: 2%;
+        height: 100px;
+        right: 2%;
+        border-radius: 10px;
+        padding-top: 5px;
+        border: 1px solid rgb(182, 179, 179);
+    }
+
+    .four {
+        width: 320px;
+        height: 140px;
+        background-color: white;
+        border-radius: 10px;
+        padding-top: 10px;
+    }
+
+    .five {
+        position: relative;
+        width: 700px;
+        height: 140px;
+        border-radius: 10px;
+        background-color: white;
+        padding-top: 10px;
+    }
+    .fiveP  {
+        padding-left: 80px;
+    }
+    .five h {
+        padding-left:80px;
+    }
+    .five .boldText {
+        padding-left: 120px;
+    }
+    .baseLine{
+        padding-left: 80px;
+    }
+    .innerDiv2 {
+        position: absolute;
+        width: 280px;
+        top: 2%;
+        height: 130px;
+        right: 2%;
+        border-radius: 10px;
+        padding: 5px;
+        border: 1px solid rgb(182, 179, 179);
+        
+    }
+
+    .boldText {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .parentGrid p {
+        padding-top: 20px;
+    }
+</style>
+
+<body>
+    <!-- grid aspect -->
+    <div class="parentGrid">
+        <div class="one">
+            <h3>Total Energy Consumption</h3>
+            <p class="boldText">230KW</p>
+            <p>Total Energy Consumption across sources</p>
+
+        </div>
+        <!-- <div class="two">
+    <h3>Total Energy Consumption</h3>
+    <p class="boldText">230KW</p>
+     <p>Total Energy Consumption across sources</p>
+</div> -->
+
+        <div class="three">
+            <h3>PAPR Score</h3>
+            <p class="boldText">72%</p>
+            <div class="innerDiv">
+                <div>
+                    Peak Value
+                    <h3> 354Kw </h3>
+                </div>
+                <div>
+                    Avg Value
+                    <h3>237Kw</h3>
+                </div>
+
+            </div>
+            <p>Lorem Ipsum is just a dummy text of the print</p>
+        </div>
+        <div class="four">
+
+        </div>
+        <div class="five">
+            <h3 class="baseLine">Baseline Consumption</h3>
+            <p class="boldText h">104,222</p>
+            <p class="fiveP">Total Energy Consumed(Kwh)</p>
+            <div class="innerDiv2">
+                <div class="foreCast">
+                    Forecasted baseline
+                    <h3>152, 000Kwh</h3>
+                </div>
+                <div class="saving">
+                    Savings
+                    <h3>-52,000Kwh</h3>
+                    You Lost Approximately #1000,000
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- first parent Div -->
+    <div class="parent">
+        <!-- firstTable Row Div -->
+        <div class="firstTable">
+            <table style=" width: 34%; height: 250px;">
+                <th colspan="4">Source Consumption(kwh)</th>
+                <tr>
+                    <td>Generator 1</td>
+                    <td>40%</td>
+                </tr>
+                <tr>
+                    <td>Generator 2</td>
+                    <td>40%</td>
+                </tr>
+                <tr>
+                    <td>Solar</td>
+                    <td>22%</td>
+                </tr>
+                <tr>
+                    <td>IPP</td>
+                    <td>22%</td>
+                </tr>
+            </table>
+            <table style=" width: 38%; height: 250px;">
+                <th colspan="4">Load Imbalance Occurences</th>
+                <tr>
+
+                    <td>Max</td>
+                    <td>Min</td>
+                    <td>Imbalance</td>
+                    <td>Date/Time</td>
+                </tr>
+                <tr>
+
+                    <td>50A</td>
+                    <td>50A</td>
+                    <td>40%</td>
+                    <td>11/06/2021 4:00PM</td>
+                </tr>
+                <tr>
+
+                    <td>30A</td>
+                    <td>30A</td>
+                    <td>10%</td>
+                    <td>12/06/2021 9:30AM</td>
+                </tr>
+                <tr>
+
+                    <td>70A</td>
+                    <td>70A</td>
+                    <td>50%</td>
+                    <td>13/06/2021 1:45PM</td>
+                </tr>
+                <tr>
+
+                    <td>120A</td>
+                    <td>120A</td>
+                    <td>0%</td>
+                    <td>14/06/2021 2:00AM</td>
+
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <!-- End of first parent Div -->
+
+
+    <!-- second parent Div -->
+    <div class="parent2">
+        <!-- secondTable Div -->
+        <div class="secondTable">
+            <table style=" width: 34%; height: 250px;">
+                <th colspan="4">Source Consumption</th>
+                <tr>
+                    <td>Source</td>
+                    <td>Diesel Consumed</td>
+                    <td>Cost</td>
+
+                <tr>
+                    <td>Generator 1</td>
+                    <td>200Hours</td>
+                    <td>#50,000</td>
+                </tr>
+                <tr>
+
+                    <td>Generator 2</td>
+                    <td>70Hours</td>
+                    <td>#20,000</td>
+
+                </tr>
+                <tr>
+                    <td>Generator 3</td>
+                    <td>150Hours</td>
+                    <td>#100,000</td>
+                </tr>
+
+
+                <table style=" width: 38%; height: 250px;">
+                    <th colspan="4">Generator Efficiency & Recommendation</th>
+                    <tr>
+
+                        <td>Source</td>
+                        <td>Size Efficiency</td>
+                        <td>Recommendation</td>
+                    </tr>
+                    <tr>
+                        <td>Generator 1</td>
+                        <td>40%</td>
+                        <td style="color: red;">Needs Upgrade</td>
+                    </tr>
+                    <tr>
+
+                        <td>Generator 2</td>
+                        <td>40%</td>
+                        <td style="color: red;">Needs Upgrade</td>
+
+                    </tr>
+                    <tr>
+                        <td>Generator 3</td>
+                        <td>90%</td>
+                        <td style="color: green;">Efficient</td>
+                    </tr>
+
+                </table>
+        </div>
+    </div>
+    <!-- End of second Div -->
+
+    <!-- parent 3 Div -->
+    <div class="parent3">
+        <div class="thirdTable">
+            <table style=" width: 100%; height: 100px;">
+                <th colspan="4">Energy Consumption</th>
+                <tr>
+                    <td>Months</td>
+                    <td>January</td>
+                    <td>February</td>
+                    <td>March</td>
+                    <td>April</td>
+                    <td>May</td>
+                    <td>June</td>
+                    <td>July</td>
+                    <td>August</td>
+                    <td>September</td>
+                    <td>October</td>
+                    <td>November</td>
+                    <td>December</td>
+                </tr>
+                <tr>
+                    <td>Consumption</td>
+                    <td>45KW</td>
+                    <td>70KW</td>
+                    <td>49KW</td>
+                    <td>51KW</td>
+                    <td>51KW</td>
+                    <td>72KW</td>
+                    <td>81KW</td>
+                    <td>111KW</td>
+                    <td>219KW</td>
+                    <td>110KW</td>
+                    <td>210KW</td>
+                    <td>320KW</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- parent 4 Div -->
+    <div class="parent4">
+        <!-- fourthTable Div -->
+        <div class="fourthTable">
+            <table style=" width: 100%;">
+                <th colspan="4">Demand Statistics</th>
+                <tr>
+                    <td>Site</td>
+                    <td>Daily Avg Usage(kwh)</td>
+                    <td>Max.Energy Usage(kwh)</td>
+                    <td>Min.Energy Usage(kwh)</td>
+                    <td>Peak Avg Usage(Day)</td>
+                </tr>
+                <tr>
+                    <td>Meadow</td>
+                    <td>415.43Kwh</td>
+                    <td>515.0Kwh(Friday, 18/06/2021)</td>
+                    <td>370.0Kwh(Sunday, 18/06/2021)</td>
+                    <td>440.75Kwh(Friday, 18/06/2021)</td>
+                </tr>
+                <tr>
+                    <td>Richmond</td>
+                    <td>230.05Kwh</td>
+                    <td>452.0Kwh(Sunday, 19/06/2021)</td>
+                    <td>432.0Kwh(Sunday, 19/06/2021)</td>
+                    <td>370.0Kwh(Sunday)</td>
+                </tr>
+                <tr>
+                    <td>Main Hall</td>
+                    <td>75.34Kwh</td>
+                    <td>764.12Kwh(Monday, 21/06/2021)</td>
+                    <td>123.0Kwh</td>
+                    <td>430.12Kwh(Monday)</td>
+                </tr>
+                <th colspan="4"></th>
+                <tr>
+                    <td>Site</td>
+                    <td>Min.Avg Usage (Day)</td>
+                    <td>Max.Demand (Date)</td>
+                    <td>Min.Demand (Date)</td>
+                </tr>
+                <tr>
+                    <td>Meadow</td>
+                    <td>370.0Kwh(Saturday)</td>
+                    <td>49.981Kw(07/06/2021),7:06PM</td>
+                    </td>
+                    <td>49.981Kw(07/06/2021), 7:06PM)</td>
+                </tr>
+
+                <tr>
+                    <td>Richmond</td>
+                    <td>350.01Kwh(Sunday)</td>
+                    <td>32.980Kw(07/06/2021),7:06PM</td>
+                    <td>32.980Kwh(07/06/2021),7:06PM</td>
+                </tr>
+                <tr>
+                    <td>Main Hall</td>
+                    <td>413.0Kwh(Monday)</td>
+                    <td>51.101Kw(07/06/2021),7:06PM</td>
+                    <td>51.101Kw(07/06/2021),7:06PM</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <!--End of parent 4 Div  -->
+
+    <!-- parent 5 Div -->
+    <div class="parent5">
+        <!-- fifthTable Div -->
+        <div class="fifthTable">
+            <table style=" width: 100%;">
+                <th colspan="4">Cost Implication</th>
+                <tr>
+                    <td>Branch</td>
+                    <td>Demand</td>
+                    <td>(Kwh)</td>
+                    <td>Cost(#)</td>
+                </tr>
+                <tr>
+                    <td>Meadow</td>
+                    <td>Main</td>
+                    <td>100,000</td>
+                    <td>22,000</td>
+                </tr>
+                <tr>
+                    <td>Richmond</td>
+                    <td>Incomer</td>
+                    <td>20,000</td>
+                    <td>52,000</td>
+                </tr>
+                <tr>
+                    <td>Head Office</td>
+                    <td>Incomer</td>
+                    <td>5,000</td>
+                    <td>10,000</td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+    <!-- End of parent 5 Div -->
+
+    <!-- parent 6 Div -->
+    <div class="parent6">
+        <!-- sixthTable Row Div -->
+        <div class="sixthTable">
+            <table style=" width: 34%; height: 250px; ">
+                <th colspan="4">Time to Use</th>
+                <tr>
+                    <td>Source</td>
+                    <td>Hours ON</td>
+                    <td>Hours OFF</td>
+                </tr>
+                <tr>
+                    <td>Generator 1</td>
+                    <td>500 Hours</td>
+                    <td>20 Hours</td>
+                </tr>
+                <tr>
+                    <td>Generator 2</td>
+                    <td>350 Hours</td>
+                    <td>25 Hours</td>
+                </tr>
+                <tr>
+                    <td>PHCN</td>
+                    <td>200 Hours</td>
+                    <td>50 Hours</td>
+                </tr>
+                <tr>
+                    <td>Total Hours of Use</td>
+                    <td>Total Blackout</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 700;">1050 Hours</td>
+                    <td style="font-weight: 700;">95 Hours</td>
+                </tr>
+
+            </table>
+            <table style=" width: 38%; height: 250px;">
+                <th colspan="4">Power Demand</th>
+                <tr>
+
+                    <td>Source</td>
+                    <td>KVA</td>
+                    <td>KW</td>
+                </tr>
+                <tr>
+
+                    <td>Minimum</td>
+                    <td>250</td>
+                    <td>220</td>
+                </tr>
+                <tr>
+                    <td>Average</td>
+                    <td>120</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Maximum</td>
+                    <td>400</td>
+                    <td>380</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <!-- End of parent 6 Div -->
+</body>
+
+</html>
